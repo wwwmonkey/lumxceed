@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webpack Angular Part 2</title>
+</head>
+<body ng-app="lumxceed">
+
+<lumx-navbar></lumx-navbar>
+<p>Angular is working: {{1 + 1 === 2}}</p>
+
+<p class="fs-headline">Icons: <i class="mdi mdi-twitter"></i> @Sh_McK</p>
+
+<div class="divider divider--dark"></div>
+
+<div class="p+">
+    <lx-button lx-type="raised">Button</lx-button>
+    <lx-button lx-type="flat">Button</lx-button>
+    <lx-button lx-type="fab"><i class="mdi mdi-plus"></i></lx-button>
+    <lx-button lx-type="icon"><i class="mdi mdi-plus"></i></lx-button>
+</div>
+
+<lx-tabs lx-active-tab="vm.activeTab">
+    <lx-tab lx-label="Lorem Ipsum 1">
+        <p class="p+">Lorem Ipsum Content 1</p>
+    </lx-tab>
+ 
+    <lx-tab lx-label="Lorem Ipsum 2" ng-disabled="vm.tabIsDisabled">
+        <p class="p+">Lorem Ipsum Content 2</p>
+    </lx-tab>
+ 
+    <lx-tab lx-label="Lorem Ipsum 3">
+        <p class="p+">Lorem Ipsum Content 3</p>
+    </lx-tab>
+</lx-tabs>
+
+<div class="divider divider--dark"></div>
+ 
+<div class="p+">
+    <lx-button ng-click="vm.activeTab = 0">Set first tab as active tab</lx-button>
+    <lx-button ng-click="vm.tabIsDisabled = !vm.tabIsDisabled">Toggle second tab disabled state</lx-button>
+</div>
+
+<div class="divider divider--dark"></div>
+
+<div class="p+">
+    <div class="card">
+        <div class="p+">
+            <strong class="fs-headline display-block">Lorem Ipsum</strong>
+            <span class="fs-subhead tc-black-2 display-block">Lorem Ipsum</span>
+ 
+            <div class="paragraph fs-body-1 mt+">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique orci a lacinia malesuada.
+                </p>
+            </div>
+        </div>
+ 
+        <div class="card__actions">
+            <lx-button lx-color="black" lx-type="flat">Yes</lx-button>
+            <lx-button lx-color="orange" lx-type="flat">No</lx-button>
+        </div>
+    </div>
+</div>
+
+<script src="bundle.js"></script>
+</body>
+</html>
